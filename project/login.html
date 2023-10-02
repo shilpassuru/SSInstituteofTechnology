@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="SSInstituteofTechnology.css">
+		<script>  
+			function validateform()
+			{  
+				var name=document.myform.name.value;  
+				var password=document.myform.password.value;  
+				if (name==null || name=="")
+				{  
+					alert("Name can't be blank");  
+					return false;  
+				}
+				else if(password.length<6){  
+					alert("Password must be at least 6 characters long.");  
+					return false;  
+				}  
+			}  
+		</script>  
+	</head>
+	<body style="background-color:rgba(255, 99, 71, 0.5);">
+		<div class="heading">
+			<h1><center>SS INSTITUTE OF TECHNOLOGY</center></h1>
+		</div>
+		
+		<div class="container">
+			<div class="image">
+				<img src="sslogo.jpg" width="150px" height="150px">
+			</div>
+			<div class="text">
+				<h4> Navghar Road, Tata Colony, Mumbai</h4>
+			</div>
+			<br><br>	
+		</div>
+		<br><br><br><br>
+		<form name="myform" method="GET" action="SSInstituteofTechnology.html" onsubmit="return validateform()">
+			<fieldset>
+			<legend><b>LOGIN</b></legend>
+			<table border="2" align="center" cellpadding="20" cellspacing="20">
+				<tr>
+					<td>
+						<label for="name">Enter Username</label>
+					</td>
+					<td>
+						<input type="text" id="name" name="name">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="password">Create password</label>
+					</td>
+					<td>
+						<input type="password" id="password" name="password" placeholder="Min 6 character"/>
+						<br><br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center><input type="submit" value="Login"></center>
+					</td>
+				</tr>
+			</table>
+			</fieldset>
+		</form>
+	</body>
+</html>
